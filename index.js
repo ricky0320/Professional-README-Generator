@@ -79,6 +79,20 @@ const questions = [
 
 ];
 
+
+const instructions = [{
+  type: 'input',
+  name: 'installation',
+  message: 'Please provide the installation instructions (Clone, etc):'
+},
+{
+  type: 'confirm',
+  name: 'finish',
+  message: 'Do you want more instructions?'
+}
+]
+
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
@@ -86,13 +100,23 @@ function writeToFile(fileName, data) {
       console.log("Success!");
   });
 }
+
+function repeatQuestions(data) {
+  inquirer.prompt(instructions)
+      .then(instructionData => {
+          data.instructions.push(instructionData.installation)
+          if (instructionData.finish) { repeatQuestions(data); } else { writeToFile('README.md', generateMarkdown(data)) }
+      })
+}
+
+
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions)
       .then(data => {
           if (data.confirmInstall) {
               data.instructions = [];
-
+              repeatQuestions(data);
           } else {
               data.instructions = ['N/A.'];
               writeToFile('README.md', generateMarkdown(data));
