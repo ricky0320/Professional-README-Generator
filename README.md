@@ -16,7 +16,7 @@ git clone, npm install inquirer<br />
 ## Usage
 Here is how this application works:  
 https://drive.google.com/file/d/1O3Ce69dEVd5TM39Vc4Evs3ab5UJPJ6QF/view<br/>
-![screenshot](./assets/images/readme-express.gif) <br />
+![Screenshot](./asstes/images/readme-express.gif)<br />
 Here is the link to the video: https://watch.screencastify.com/v/Lb7tEGS5YpcCHeSaRw8k
 ## Credits
 Here are the list of collaborators:  
