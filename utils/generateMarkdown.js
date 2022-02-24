@@ -36,7 +36,7 @@ Email: ${data.email}`);
 }
 
 function videoLink() {
-  return 'https://watch.screencastify.com/v/Lb7tEGS5YpcCHeSaRw8k';
+  return 'https://drive.google.com/file/d/1O3Ce69dEVd5TM39Vc4Evs3ab5UJPJ6QF/view';
 }
 
 //function renders the badge

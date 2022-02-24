@@ -15,9 +15,9 @@ This is a node app that helps user generate a professional readme file to save t
 git clone, npm install inquirer<br />
 ## Usage
 Here is how this application works:  
-https://drive.google.com/file/d/1O3Ce69dEVd5TM39Vc4Evs3ab5UJPJ6QF/view<br/>
 ![Screenshot](./asstes/images/readme-express.gif)<br />
-Here is the link to the video: https://watch.screencastify.com/v/Lb7tEGS5YpcCHeSaRw8k
+Here is the link to the video:<br/>
+https://drive.google.com/file/d/17BTn1i5_U1-ej0TBEViptRbNwSodNAS1/view
 ## Credits
 Here are the list of collaborators:  
 ricky<br />
