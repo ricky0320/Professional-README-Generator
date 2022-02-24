@@ -80,10 +80,27 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+      if (err) { console.log('There was an error.', err) }
+      console.log("Success!");
+  });
+}
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions)
+      .then(data => {
+          if (data.confirmInstall) {
+              data.instructions = [];
 
+          } else {
+              data.instructions = ['N/A.'];
+              writeToFile('README.md', generateMarkdown(data));
+          }
+      })
+      .catch((err) => {
+          console.log('There was an error', err);
+      });
+}
 // Function call to initialize app
 init();
